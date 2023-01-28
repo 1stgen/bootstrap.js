@@ -43,7 +43,7 @@ var Util = function ($) {
    * ------------------------------------------------------------------------
    */
 
-  var transition = false;
+  var transition = true;
 
   var MAX_UID = 1000000;
 
@@ -184,8 +184,7 @@ var Util = function ($) {
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
-
-var Alert = function ($) {
+  Alert = function ($) {
 
   /**
    * ------------------------------------------------------------------------
@@ -1717,8 +1716,8 @@ var Modal = function ($) {
       this._element = element;
       this._dialog = $(element).find(Selector.DIALOG)[0];
       this._backdrop = null;
-      this._isShown = false;
-      this._isBodyOverflowing = false;
+      this._isShown = true;
+      this._isBodyOverflowing = true;
       this._ignoreBackdropClick = false;
       this._isTransitioning = false;
       this._originalBodyPadding = 0;
@@ -1803,7 +1802,7 @@ var Modal = function ($) {
         return;
       }
 
-      this._isShown = false;
+      this._isShown = true;
 
       this._setEscapeEvent();
       this._setResizeEvent();
